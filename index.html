@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单前端页面示例</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>前端示例</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home"><i class="fas fa-home"></i> 首页</a></li>
+                    <li><a href="#features"><i class="fas fa-star"></i> 功能</a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"></i> 关于</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> 联系</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">欢迎来到<span class="highlight">前端世界</span></h1>
+                    <p class="hero-subtitle">这是一个简单的响应式前端页面示例，展示了HTML、CSS和JavaScript的基本用法。</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" id="learnMoreBtn">
+                            <i class="fas fa-rocket"></i> 了解更多
+                        </button>
+                        <button class="btn btn-secondary" id="demoBtn">
+                            <i class="fas fa-play"></i> 查看演示
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="code-preview">
+                        <div class="code-header">
+                            <div class="code-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">example.js</span>
+                        </div>
+                        <pre class="code-content"><code>// 简单的JavaScript示例
+function greetUser(name) {
+    return `你好, ${name}!`;
+}
+
+// 事件监听器
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('demoBtn');
+    button.addEventListener('click', () => {
+        alert(greetUser('访客'));
+    });
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">主要功能</h2>
+                <p class="section-subtitle">探索这个页面的一些有趣功能</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="feature-title">主题切换</h3>
+                        <p class="feature-description">点击右上角的月亮图标可以在亮色和暗色主题之间切换。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature-title">响应式设计</h3>
+                        <p class="feature-description">页面会自动适应不同屏幕尺寸，在手机、平板和电脑上都能完美显示。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3 class="feature-title">交互效果</h3>
+                        <p class="feature-description">按钮悬停效果、卡片动画和JavaScript交互功能。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="feature-title">代码示例</h3>
+                        <p class="feature-description">页面中包含了实际的HTML、CSS和JavaScript代码示例。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="counter-section">
+            <div class="container">
+                <h2 class="section-title">交互计数器</h2>
+                <div class="counter-container">
+                    <div class="counter-display">
+                        <span id="counterValue">0</span>
+                    </div>
+                    <div class="counter-controls">
+                        <button class="btn btn-counter" id="decrementBtn">
+                            <i class="fas fa-minus"></i> 减少
+                        </button>
+                        <button class="btn btn-counter" id="resetBtn">
+                            <i class="fas fa-redo"></i> 重置
+                        </button>
+                        <button class="btn btn-counter" id="incrementBtn">
+                            <i class="fas fa-plus"></i> 增加
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">关于这个页面</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>这个页面是一个简单的前端示例，展示了现代Web开发的基本技术：</p>
+                        <ul class="about-list">
+                            <li><i class="fas fa-check-circle"></i> 语义化的HTML5结构</li>
+                            <li><i class="fas fa-check-circle"></i> 现代化的CSS3样式和Flexbox布局</li>
+                            <li><i class="fas fa-check-circle"></i> 响应式设计和媒体查询</li>
+                            <li><i class="fas fa-check-circle"></i> JavaScript交互和DOM操作</li>
+                            <li><i class="fas fa-check-circle"></i> Font Awesome图标库</li>
+                            <li><i class="fas fa-check-circle"></i> Google字体</li>
+                        </ul>
+                        <p>这个项目适合初学者学习前端开发的基础知识，也适合作为其他项目的起点。</p>
+                    </div>
+                    <div class="about-image">
+                        <div class="tech-stack">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span>前端示例</span>
+                    </div>
+                    <p class="footer-description">
+                        一个简单的前端页面示例，用于展示现代Web开发技术。
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 class="footer-title">快速链接</h3>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#features">功能</a></li>
+                        <li><a href="#about">关于</a></li>
+                        <li><a href="#contact">联系</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-title">联系信息</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> example@frontend.dev</li>
+                        <li><i class="fas fa-globe"></i> www.frontend-example.dev</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 中国</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 前端示例页面. 所有权利保留. | 由 <span class="highlight">HTML, CSS & JavaScript</span> 构建</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
